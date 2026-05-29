@@ -3,14 +3,19 @@ const base    = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const heroUrl = `${base}assets/plc-hero-metal.jpg`;
 ---
 
+<!--
+  Desktop: full-screen section, text overlaid at bottom.
+  Mobile:  260px image block (contain) + separate text block below.
+-->
+
 <section
   class="splash"
   aria-label="Hero"
   style={`--hero-url: url('${heroUrl}')`}
 >
-  <p class="eyebrow">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
-
-  <div class="splash-foot">
+  <!-- desktop-only content inside the image -->
+  <p class="eyebrow desktop-only">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
+  <div class="splash-foot desktop-only">
     <div class="keywords">
       <span>Impermeabilizzare</span>
       <span class="d">◆</span>
@@ -25,7 +30,25 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
   </div>
 </section>
 
+<!-- Mobile-only: hero text lives BELOW the image, not overlaid -->
+<div class="hero-mobile" aria-label="Hero text">
+  <p class="mob-eye">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
+  <div class="mob-kw">
+    <span>Impermeabilizzare</span>
+    <span class="d">◆</span>
+    <span>Ristrutturare</span>
+    <span class="d">◆</span>
+    <span>Garantire</span>
+  </div>
+  <h1 class="mob-h1">Terrazzi a prova<br>d'acqua.</h1>
+  <div class="mob-btns">
+    <a class="btn-base btn-cta mob-btn" href="#contatti">Prenota un sopralluogo</a>
+    <a class="btn-base btn-ghost mob-btn" href="#servizi">Scopri i lavori →</a>
+  </div>
+</div>
+
 <style>
+  /* ── Shared splash image ── */
   .splash {
     position: relative;
     min-height: 91vh;
@@ -72,25 +95,6 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
     gap: 22px;
   }
 
-  .wordxl {
-    font-family: var(--font-ui);
-    font-weight: 800;
-    font-size: clamp(52px, 10vw, 128px);
-    line-height: .86;
-    letter-spacing: 2px;
-    color: #fff;
-    margin: 0;
-  }
-  .wordxl .g {
-    display: block;
-    font-weight: 600;
-    font-size: clamp(15px, 2.4vw, 30px);
-    letter-spacing: clamp(10px, 3vw, 32px);
-    color: var(--orange-bright);
-    margin-top: 14px;
-    padding-left: .4em;
-  }
-
   .keywords {
     display: flex;
     gap: clamp(10px, 2vw, 22px);
@@ -117,16 +121,83 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
     text-transform: uppercase;
     color: rgba(255,255,255,.6);
   }
-  .scrollcue .ar {
-    font-size: 15px;
-    animation: bob 1.8s ease-in-out infinite;
-  }
+  .scrollcue .ar { font-size: 15px; animation: bob 1.8s ease-in-out infinite; }
   @keyframes bob {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(5px); }
   }
   @media (prefers-reduced-motion: reduce) { .scrollcue .ar { animation: none; } }
+
+  /* ── Mobile hero text block (hidden on desktop) ── */
+  .hero-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 18px 24px;
+    background: var(--bg);
+  }
+  .mob-eye {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .mob-eye b { color: var(--orange-bright); font-weight: 400; }
+  .mob-kw {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .mob-kw .d { color: var(--orange-bright); font-size: .8em; }
+  .mob-h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.04;
+    letter-spacing: -.5px;
+    color: var(--ink);
+    margin: 0;
+  }
+  :global(body.char-industriale) .mob-h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+  }
+  .mob-btns { display: flex; flex-direction: column; gap: 10px; }
+  .mob-btn  { justify-content: center; font-size: 16px; padding: 14px 19px; }
+
+  /* ── Responsive ── */
   @media (max-width: 880px) {
-    .splash { min-height: auto; padding: 56px 20px 72px; }
+    /* Image: show full logo with contain, short height, fade at bottom */
+    .splash {
+      min-height: 260px;
+      height: 260px;
+      padding: 18px 20px 0;
+      background-size: contain;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .splash::before {
+      background: linear-gradient(
+        180deg,
+        transparent       0%,
+        transparent       55%,
+        rgba(10,10,12,.6) 78%,
+        var(--bg)         100%
+      );
+    }
+    /* Hide desktop overlay text on mobile */
+    .desktop-only { display: none !important; }
+    /* Show mobile text block */
+    .hero-mobile  { display: flex; }
   }
 </style>

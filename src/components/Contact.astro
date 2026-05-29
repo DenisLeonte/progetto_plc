@@ -116,7 +116,10 @@
   }
   .chip-orange { border-color: var(--orange); color: var(--orange-bright); }
 
-  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
+  @media (max-width: 880px) {
+    .split { grid-template-columns: 1fr; }
+    .contact-wrap :global(section) { padding: 28px 0; }
+  }
 </style>
 
 <script>

@@ -89,5 +89,8 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
   .zone-chips  { display: flex; gap: 9px; flex-wrap: wrap; }
   .chip-orange { border-color: var(--orange); color: var(--orange-bright); }
 
-  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
+  @media (max-width: 880px) {
+    .split { grid-template-columns: 1fr; }
+    :global(section) { padding: 28px 0; }
+  }
 </style>
