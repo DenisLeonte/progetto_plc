@@ -196,25 +196,22 @@
   /* ── Mobile: 2-col bento, no hero tile ── */
   @media (max-width: 880px) {
     .bento {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       grid-auto-rows: minmax(100px, auto);
     }
 
-    /* Hide desktop hero tile — mobile hero is in Splash component */
-    .tile-hero { display: none; }
+    .tile-hero          { display: none; }
 
-    /* Reorder: [5+ anni] [10 garanzia] → CTA → wide photo → svc1+2 → BA → svc3 */
     .tile-stat-anni     { order: 1; min-height: 110px; }
     .tile-stat-garanzia { order: 2; min-height: 110px; }
-    .tile-cta           { order: 3; grid-column: span 2; min-height: 100px; }
-    .tile-wide          { order: 4; grid-column: span 2; min-height: 140px; }
-    .tile-svc           { order: 5; align-items: flex-start; padding: 14px; }
-    .tile-ba            { order: 7; grid-column: span 2; min-height: 120px; }
-    .tile-svc-3         { order: 8; grid-column: span 2; }
+    .tile-cta           { order: 3; min-height: 100px; }
+    .tile-wide          { order: 4; min-height: 140px; }
+    .tile-svc           { order: 5; align-items: flex-start; padding: 16px 18px; }
+    .tile-ba            { order: 7; min-height: 140px; }
+    .tile-svc-3         { order: 8; }
 
-    /* Smaller heading so long words fit in ~160px-wide tiles */
-    .tile-svc .hand     { font-size: 14px; letter-spacing: 0; line-height: 1.25; }
-    .tile-svc .arr      { font-size: 20px; align-self: flex-end; }
+    .tile-svc .hand     { font-size: 18px; letter-spacing: 0; line-height: 1.2; }
+    .tile-svc .arr      { font-size: 22px; align-self: flex-end; }
   }
 </style>
 
