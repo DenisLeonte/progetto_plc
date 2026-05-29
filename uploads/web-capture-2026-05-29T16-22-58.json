@@ -1,0 +1,510 @@
+[
+  {
+    "id": "cap_mpr4rn5s_0jr7hq",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:43.457Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 373,
+      "y": 0,
+      "width": 1491,
+      "height": 65
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1491.2px",
+      "height": "65px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4rnuu_pet8sd",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:44.358Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 373,
+      "height": 65
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "372.797px",
+      "height": "65px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4roi4_noms3z",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:45.196Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 65,
+      "width": 1864,
+      "height": 650
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1864px",
+      "height": "650px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4rpm8_7xtv2u",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:46.640Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 215,
+      "width": 1864,
+      "height": 632
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1864px",
+      "height": "632.25px",
+      "background": "rgb(255, 255, 255) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4rril_6w4zqk",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:49.101Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 247,
+      "width": 1864,
+      "height": 509
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1864px",
+      "height": "509px",
+      "background": "rgb(255, 255, 255) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".Le88gL > .QG9w8P .LNYVZi",
+        "css": "background-color: var(--section-corvid-background-color,var(--bg-overlay-color));"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4rt4s_1i3thu",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:51.196Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 11,
+      "width": 1864,
+      "height": 629
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1864px",
+      "height": "629px",
+      "background": "rgb(237, 146, 50) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".Le88gL > .QG9w8P .LNYVZi",
+        "css": "background-color: var(--section-corvid-background-color,var(--bg-overlay-color));"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4rubk_bwdbv1",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:52.736Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 640,
+      "width": 1864,
+      "height": 149
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1864px",
+      "height": "148.797px",
+      "background": "rgb(233, 233, 233) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".Le88gL > .QG9w8P .LNYVZi",
+        "css": "background-color: var(--section-corvid-background-color,var(--bg-overlay-color));"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpr4ruwi_eastqv",
+    "selector": "div.LNYVZi",
+    "label": "div.LNYVZi",
+    "tag": "div",
+    "url": "https://www.ngc.build/",
+    "title": "HOME | Ngc Construction",
+    "timestamp": "2026-05-29T16:22:53.490Z",
+    "innerText": "",
+    "outerHTML": "<div data-testid=\"colorUnderlay\" class=\"LNYVZi ayCf9D\"></div>",
+    "rect": {
+      "x": 0,
+      "y": 789,
+      "width": 1678,
+      "height": 130
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "absolute",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1677.59px",
+      "height": "130px",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box",
+      "font-family": "Arial, Helvetica, sans-serif",
+      "font-size": "10px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title",
+        "css": "vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px;"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      },
+      {
+        "selector": ".QG9w8P .ayCf9D",
+        "css": "width: 100%; height: 100%; position: absolute; top: 0px;"
+      },
+      {
+        "selector": ".LNYVZi",
+        "css": "background-color: var(--bg-overlay-color); background-image: var(--bg-gradient); transition: var(--inherit-transition);"
+      }
+    ]
+  }
+]
