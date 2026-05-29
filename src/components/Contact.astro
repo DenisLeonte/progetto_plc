@@ -1,0 +1,146 @@
+---
+---
+
+<div class="contact-wrap" id="contatti">
+  <div class="wrap">
+    <section>
+      <div class="split">
+
+        <!-- Form -->
+        <div class="reveal">
+          <p class="kicker">Richiedi un sopralluogo</p>
+          <h2 class="hand lg">Preventivo gratuito in 24 ore</h2>
+          <p class="coverage">ROMA · TUTTO IL LAZIO · DISPONIBILI PER TRASFERTE</p>
+
+          <form class="form" id="contact-form" novalidate>
+            <input  class="field" type="text"  name="nome"        placeholder="Nome e cognome *"              required />
+            <input  class="field" type="tel"   name="telefono"    placeholder="Telefono *"                    required />
+            <input  class="field" type="text"  name="zona"        placeholder="Zona / Comune *"               required />
+            <textarea class="field area" name="descrizione" placeholder="Descrivi brevemente il lavoro *" required></textarea>
+            <button class="btn-base btn-cta submit-btn" type="submit">Invia richiesta</button>
+            <div class="success-msg" id="form-success">
+              ✓ Richiesta inviata! Vi contatteremo entro 24 ore.
+            </div>
+          </form>
+        </div>
+
+        <!-- Direct contacts -->
+        <div class="reveal delay-2 right-col">
+          <div class="contact-card card">
+            <h3 class="hand md">Contatti diretti</h3>
+            <a class="contact-item" href="tel:+390600000000">
+              <span class="ico">☎</span> 06 000 0000
+            </a>
+            <a class="contact-item" href="mailto:info@plcgroup.it">
+              <span class="ico">✉</span> info@plcgroup.it
+            </a>
+            <a class="contact-item contact-wa" href="https://wa.me/39060000000" target="_blank" rel="noopener">
+              <span class="ico">💬</span> Scrivici su WhatsApp
+            </a>
+          </div>
+
+          <div class="map-ph">📍 Sede — Roma</div>
+
+          <span class="chip chip-orange">Lun–Sab · 8:00–19:00</span>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  .contact-wrap {
+    background: var(--bg-2);
+    border-top: 2px solid var(--line-soft);
+    border-bottom: 2px solid var(--line-soft);
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    align-items: start;
+  }
+
+  .hand.lg   { margin: 8px 0 4px; }
+  .coverage  {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--ink-soft); letter-spacing: 1px;
+    margin: 0 0 22px;
+  }
+
+  .form   { display: flex; flex-direction: column; gap: 11px; max-width: 430px; }
+  .field  {
+    background: var(--surface); border: 2px solid var(--line);
+    border-radius: 11px; padding: 13px 15px;
+    font-family: var(--font-body); color: var(--ink-faint); font-size: 15px;
+    width: 100%; outline: none; resize: vertical;
+    transition: border-color var(--dur), color var(--dur);
+  }
+  .field::placeholder { color: var(--ink-faint); }
+  .field:focus { border-color: var(--orange-deep); color: var(--ink); }
+  .area      { height: 96px; }
+  .submit-btn { justify-content: center; }
+
+  .success-msg {
+    display: none;
+    background: var(--surface-2); border: 2px solid var(--orange-deep);
+    border-radius: 11px; padding: 14px;
+    color: var(--orange-bright); font-family: var(--font-ui); font-size: 14px; text-align: center;
+  }
+
+  .right-col { display: flex; flex-direction: column; gap: 14px; }
+
+  .contact-card { padding: 20px; }
+  .contact-card .hand { margin: 0 0 14px; }
+
+  .contact-item {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-ui); color: var(--ink-soft); font-size: 15px;
+    padding: 8px 0; border-bottom: 1px solid var(--line-soft);
+    transition: color var(--dur);
+  }
+  .contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .contact-item:hover { color: var(--ink); }
+  .contact-wa  { color: var(--orange-bright) !important; }
+  .contact-wa:hover { color: var(--orange) !important; }
+  .ico { font-size: 17px; flex-shrink: 0; }
+
+  .map-ph {
+    height: 160px; border-radius: 12px;
+    background: var(--surface); border: 2px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .chip-orange { border-color: var(--orange); color: var(--orange-bright); }
+
+  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const form    = document.getElementById('contact-form') as HTMLFormElement | null;
+  const success = document.getElementById('form-success');
+
+  form?.addEventListener('submit', e => {
+    e.preventDefault();
+    const required = form.querySelectorAll<HTMLElement>('[required]');
+    let ok = true;
+    required.forEach(el => {
+      const v = (el as HTMLInputElement | HTMLTextAreaElement).value.trim();
+      el.style.borderColor = v ? '' : 'var(--orange-deep)';
+      if (!v) ok = false;
+    });
+    if (!ok) return;
+
+    form.style.opacity = '.5';
+    form.style.pointerEvents = 'none';
+    setTimeout(() => {
+      if (success) success.style.display = 'block';
+      form.reset();
+      form.style.opacity = '';
+      form.style.pointerEvents = '';
+    }, 700);
+  });
+</script>

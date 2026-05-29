@@ -1,0 +1,120 @@
+---
+const projects = [
+  { title: 'Terrazzo · Roma EUR',      sub: '120 m² · 2025', cats: ['terrazzi', 'ristrutturazioni'] },
+  { title: 'Lastrico · Frosinone',     sub: '80 m² · 2024',  cats: ['guaine'] },
+  { title: 'Condominio · Latina',      sub: '300 m² · 2024', cats: ['terrazzi', 'ristrutturazioni'] },
+  { title: 'Terrazza · Roma Parioli',  sub: '65 m² · 2025',  cats: ['guaine', 'terrazzi'] },
+  { title: 'Balcone · Viterbo',        sub: '40 m² · 2024',  cats: ['ristrutturazioni'] },
+  { title: 'Lastrico · Rieti',         sub: '180 m² · 2023', cats: ['guaine', 'terrazzi'] },
+];
+
+const filters = [
+  { id: 'tutti',          label: 'Tutti' },
+  { id: 'terrazzi',       label: 'Terrazzi' },
+  { id: 'guaine',         label: 'Guaine' },
+  { id: 'ristrutturazioni', label: 'Ristrutturazioni' },
+];
+---
+
+<div class="wrap" id="progetti">
+  <section>
+    <div class="sec-head reveal">
+      <div>
+        <p class="kicker">Portfolio</p>
+        <h2 class="hand lg">Progetti completati</h2>
+      </div>
+      <a class="btn-base btn-ghost btn-sm" href="#contatti">Tutti i progetti →</a>
+    </div>
+
+    <div class="filters reveal delay-1" id="project-filters">
+      {filters.map((f, i) => (
+        <button
+          class={`chip${i === 0 ? ' on' : ''}`}
+          data-filter={f.id}
+        >
+          {f.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="pgrid" id="project-grid">
+      {projects.map((p, i) => (
+        <article
+          class={`pcard reveal delay-${(i % 3) + 1}`}
+          data-cats={p.cats.join(' ')}
+        >
+          <div class="photo">
+            <div class="ph ph-sq"><span class="lbl">FOTO progetto</span></div>
+          </div>
+          <div class="meta">
+            <h3>{p.title}</h3>
+            <small>{p.sub}</small>
+            <div class="tag">
+              <span class="chip" style="font-size:10px;padding:3px 9px;">{p.cats[0]}</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .sec-head .kicker  { margin-bottom: 6px; }
+  .sec-head .hand    { margin-top: 6px; }
+
+  .filters { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 20px; }
+
+  .pgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pcard {
+    background: var(--surface);
+    border: 2px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s, border-color var(--dur);
+  }
+  .pcard:hover { transform: translateY(-3px); }
+  .pcard[data-hidden] { display: none; }
+
+  .photo    { height: 172px; overflow: hidden; }
+  .ph-sq    { height: 100%; border: none; border-radius: 0; }
+
+  .meta     { padding: 14px 16px; }
+  .meta h3  { font-family: var(--font-head); font-size: 21px; margin: 0 0 3px; }
+  .meta small { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint); letter-spacing: .5px; }
+  .tag      { margin-top: 8px; }
+
+  @media (max-width: 880px) { .pgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .pgrid { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const filterBar = document.getElementById('project-filters');
+  const cards     = document.querySelectorAll<HTMLElement>('#project-grid .pcard');
+
+  filterBar?.addEventListener('click', e => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+    if (!btn) return;
+    filterBar.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+    btn.classList.add('on');
+    const f = btn.dataset.filter!;
+    cards.forEach(card => {
+      const cats = (card.dataset.cats ?? '').split(' ');
+      card.toggleAttribute('data-hidden', f !== 'tutti' && !cats.includes(f));
+    });
+  });
+</script>

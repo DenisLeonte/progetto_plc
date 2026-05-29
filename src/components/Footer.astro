@@ -1,0 +1,127 @@
+---
+const base      = import.meta.env.BASE_URL;
+const logoLight = `${base}assets/plc-icon-light.png`;
+
+const cols = [
+  {
+    heading: 'Servizi',
+    links: [
+      { label: 'Impermeabilizzazione terrazzi', href: '#servizi' },
+      { label: 'Posa di guaine',                href: '#servizi' },
+      { label: 'Massetto e pavimento',          href: '#servizi' },
+    ],
+  },
+  {
+    heading: 'Azienda',
+    links: [
+      { label: 'Chi siamo', href: '#chi-siamo' },
+      { label: 'Progetti',  href: '#progetti'  },
+      { label: 'Contatti',  href: '#contatti'  },
+    ],
+  },
+  {
+    heading: 'Contatti',
+    links: [
+      { label: '06 000 0000',        href: 'tel:+390600000000' },
+      { label: 'info@plcgroup.it',   href: 'mailto:info@plcgroup.it' },
+      { label: 'WhatsApp',           href: 'https://wa.me/39060000000' },
+    ],
+  },
+];
+---
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+
+      <!-- Brand col -->
+      <div class="fcol">
+        <a href="#" class="brand">
+          <img src={logoLight} alt="" id="footer-logo" />
+          <div class="word">
+            <b>PLC</b>
+            <span>GROUP</span>
+          </div>
+        </a>
+        <p class="tagline">
+          Impermeabilizzazione e ristrutturazione terrazzi in tutta la regione Lazio.
+        </p>
+      </div>
+
+      <!-- Link cols -->
+      {cols.map(col => (
+        <div class="fcol">
+          <b>{col.heading}</b>
+          <ul>
+            {col.links.map(l => (
+              <li>
+                <a href={l.href}>{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+    </div>
+
+    <div class="fbar">
+      <span>© 2026 PLC GROUP · ROMA</span>
+      <span>P.IVA 00000000000</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 42px 0 30px;
+    background: var(--footer-bg);
+    border-top: 2px solid var(--line-soft);
+  }
+
+  .fgrid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 26px;
+  }
+
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; margin-bottom: 14px;
+  }
+  .brand img { height: 40px; width: auto; }
+  .word      { font-family: var(--font-ui); line-height: 1; }
+  .word b    { display: block; font-weight: 800; font-size: 21px; letter-spacing: 1px; color: var(--ink); }
+  .word span { display: block; font-weight: 500; font-size: 10px; letter-spacing: 7px; color: var(--orange-bright); margin-top: 2px; }
+
+  .tagline {
+    font-family: var(--font-ui);
+    font-size: 13px; color: var(--ink-faint);
+    line-height: 1.6; margin: 0; max-width: 220px;
+  }
+
+  .fcol > b {
+    font-family: var(--font-ui); font-weight: 600;
+    font-size: 14px; color: var(--ink); letter-spacing: .5px;
+  }
+  ul {
+    list-style: none; margin: 10px 0 0; padding: 0;
+    display: flex; flex-direction: column; gap: 7px;
+  }
+  ul a {
+    font-family: var(--font-ui); font-size: 14px;
+    color: var(--ink-soft);
+    transition: color var(--dur);
+  }
+  ul a:hover { color: var(--ink); }
+
+  .fbar {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 30px; padding-top: 18px;
+    border-top: 1.5px solid var(--line-soft);
+    font-family: var(--font-mono); font-size: 10.5px;
+    color: var(--ink-faint); letter-spacing: 1px;
+  }
+
+  @media (max-width: 880px) { .fgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .fgrid { grid-template-columns: 1fr; } }
+</style>

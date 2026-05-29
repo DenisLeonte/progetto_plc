@@ -1,0 +1,121 @@
+---
+const base      = import.meta.env.BASE_URL;
+const logoLight = `${base}assets/plc-icon-light.png`;
+---
+
+<div class="nav-wrap" id="nav-wrap">
+  <div class="wrap">
+    <nav>
+      <a href="#" class="brand">
+        <img src={logoLight} alt="PLC Group" id="nav-logo" />
+        <div class="word">
+          <b>PLC</b>
+          <span>GROUP</span>
+        </div>
+      </a>
+
+      <ul class="nlinks">
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#progetti">Progetti</a></li>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a class="phone" href="tel:+390600000000">☎ 06 000 0000</a>
+        <a class="btn-base btn-cta btn-sm" href="#contatti">Prenota sopralluogo</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid transparent;
+    transition: background .3s, border-color .3s, backdrop-filter .3s;
+  }
+  .nav-wrap.scrolled {
+    background: rgba(17, 20, 23, .88);
+    border-color: var(--line-soft);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+  }
+  :global(body.mood-cemento) .nav-wrap.scrolled {
+    background: rgba(231, 227, 220, .9);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 16px 0;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .brand img { height: 42px; width: auto; }
+  .word      { font-family: var(--font-ui); line-height: 1; }
+  .word b    { display: block; font-weight: 800; font-size: 21px; letter-spacing: 1px; color: #fff; }
+  .word span { display: block; font-weight: 500; font-size: 10px; letter-spacing: 7px; color: var(--orange-bright); margin-top: 2px; }
+  :global(body.mood-cemento) .word b { color: var(--ink); }
+
+  .nlinks {
+    display: flex;
+    gap: 24px;
+    margin: 0 0 0 14px;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .nlinks a {
+    position: relative;
+    padding-bottom: 2px;
+    transition: color var(--dur);
+  }
+  .nlinks a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: var(--orange);
+    transition: width var(--dur);
+  }
+  .nlinks a:hover            { color: var(--ink); }
+  .nlinks a:hover::after     { width: 100%; }
+
+  .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .phone {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    transition: color var(--dur);
+  }
+  .phone:hover { color: var(--orange-bright); }
+
+  @media (max-width: 880px) {
+    .nlinks, .phone { display: none; }
+  }
+</style>
+
+<script>
+  const wrap = document.getElementById('nav-wrap');
+  const tick = () => wrap?.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+</script>

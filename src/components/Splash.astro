@@ -1,0 +1,135 @@
+---
+const base    = import.meta.env.BASE_URL;
+const heroUrl = `${base}assets/plc-hero-metal.jpg`;
+---
+
+<section
+  class="splash"
+  aria-label="Hero"
+  style={`--hero-url: url('${heroUrl}')`}
+>
+  <p class="eyebrow">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
+
+  <div class="splash-foot">
+    <p class="wordxl" aria-label="PLC Group">
+      PLC<span class="g">GROUP</span>
+    </p>
+    <div class="keywords">
+      <span>Impermeabilizzare</span>
+      <span class="d">◆</span>
+      <span>Ristrutturare</span>
+      <span class="d">◆</span>
+      <span>Garantire</span>
+    </div>
+    <div class="scrollcue" aria-hidden="true">
+      <span>Scorri</span>
+      <span class="ar">↓</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .splash {
+    position: relative;
+    min-height: 91vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    padding: 64px 28px 44px;
+    background: #0c0c0f var(--hero-url) center center / cover no-repeat;
+  }
+  .splash::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10,10,12,.7)  0%,
+      rgba(10,10,12,0)  22%,
+      rgba(10,10,12,0)  44%,
+      rgba(10,10,12,.58) 72%,
+      var(--bg)          98%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+  .splash > * { position: relative; z-index: 1; }
+
+  .eyebrow {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.82);
+  }
+  .eyebrow b { color: var(--orange-bright); font-weight: 400; }
+
+  .splash-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .wordxl {
+    font-family: var(--font-ui);
+    font-weight: 800;
+    font-size: clamp(52px, 10vw, 128px);
+    line-height: .86;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0;
+  }
+  .wordxl .g {
+    display: block;
+    font-weight: 600;
+    font-size: clamp(15px, 2.4vw, 30px);
+    letter-spacing: clamp(10px, 3vw, 32px);
+    color: var(--orange-bright);
+    margin-top: 14px;
+    padding-left: .4em;
+  }
+
+  .keywords {
+    display: flex;
+    gap: clamp(10px, 2vw, 22px);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: clamp(12px, 1.5vw, 17px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.82);
+  }
+  .keywords .d { color: var(--orange-bright); font-size: .7em; }
+
+  .scrollcue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+  }
+  .scrollcue .ar {
+    font-size: 15px;
+    animation: bob 1.8s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(5px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .scrollcue .ar { animation: none; } }
+  @media (max-width: 880px) {
+    .splash { min-height: auto; padding: 56px 20px 72px; }
+  }
+</style>

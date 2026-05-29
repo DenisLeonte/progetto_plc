@@ -1,0 +1,93 @@
+---
+const certBadges = [
+  { icon: '🛡️', label: 'Garanzia 10 anni' },
+  { icon: '📋', label: 'Assicurazione RC' },
+  { icon: '✅', label: 'DURC regolare' },
+];
+
+const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
+---
+
+<div class="wrap" id="chi-siamo">
+  <section>
+    <div class="split">
+
+      <!-- Left: text -->
+      <div class="reveal">
+        <p class="kicker">Chi siamo</p>
+        <h2 class="hand lg">Specialisti nell'impermeabilizzazione del Lazio</h2>
+        <p class="body-text">
+          PLC Group nasce dall'esperienza diretta sul campo. Operiamo
+          nell'impermeabilizzazione e ristrutturazione di terrazzi, lastrici solari
+          e balconi in tutto il Lazio, con una presenza consolidata su Roma e provincia.
+        </p>
+        <p class="body-text">
+          Ogni intervento viene preceduto da un sopralluogo gratuito per valutare
+          le condizioni strutturali e proporre la soluzione tecnica più adeguata.
+          Utilizziamo esclusivamente materiali certificati di prima qualità.
+        </p>
+
+        <p class="kicker" style="margin-bottom:12px;">Certificazioni &amp; garanzie</p>
+        <div class="cert-row">
+          {certBadges.map(b => (
+            <div class="cert-badge">
+              <span class="ico">{b.icon}</span>
+              {b.label}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: map + zones -->
+      <div class="reveal delay-2">
+        <div class="map-ph">📍 Mappa zona servita — Roma + tutto il Lazio</div>
+        <div class="zone-chips">
+          {zones.map(z => <span class="chip">{z}</span>)}
+          <span class="chip chip-orange">+ trasferte</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<style>
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    align-items: center;
+  }
+
+  .body-text {
+    font-family: var(--font-ui);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+  .hand.lg { margin: 8px 0 16px; }
+
+  .cert-row  { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+  .cert-badge {
+    background: var(--surface); border: 2px solid var(--line); border-radius: 10px;
+    padding: 10px 14px; font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ico { font-size: 18px; }
+
+  .map-ph {
+    height: 220px; border-radius: 12px;
+    background: var(--surface); border: 2px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 14px;
+  }
+
+  .zone-chips  { display: flex; gap: 9px; flex-wrap: wrap; }
+  .chip-orange { border-color: var(--orange); color: var(--orange-bright); }
+
+  @media (max-width: 880px) { .split { grid-template-columns: 1fr; } }
+</style>
