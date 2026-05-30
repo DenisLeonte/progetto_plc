@@ -1,7 +1,11 @@
 ---
 ---
 
-<div class="wrap" id="servizi">
+<div id="servizi">
+
+<!-- ══ DESKTOP: 4-col bento (hidden on mobile) ══ -->
+<div class="bento-wrap">
+<div class="wrap">
   <section>
     <div class="bento">
 
@@ -94,6 +98,66 @@
     </div>
   </section>
 </div>
+</div><!-- /bento-wrap -->
+
+<!-- ══ MOBILE: stats bar + service list (hidden on desktop) ══ -->
+<div class="mob-layout">
+
+  <!-- 3-cell stats bar -->
+  <div class="mob-stats">
+    <div class="mob-stat">
+      <div class="mob-stat-num">25+</div>
+      <div class="mob-stat-cap">Anni</div>
+    </div>
+    <div class="mob-stat">
+      <div class="mob-stat-num">10</div>
+      <div class="mob-stat-cap">Anni garanzia</div>
+    </div>
+    <div class="mob-stat">
+      <div class="mob-stat-num">500+</div>
+      <div class="mob-stat-cap">Lavori</div>
+    </div>
+  </div>
+
+  <!-- Service list -->
+  <div class="mob-svc-section">
+    <p class="mob-kicker">Cosa facciamo</p>
+    <h2 class="mob-sh">I nostri servizi</h2>
+    <div class="mob-svc-list">
+
+      <a href="#contatti" class="mob-svc-tile">
+        <div class="mob-svc-num">01</div>
+        <div class="mob-svc-body">
+          <div class="mob-svc-name">Impermeabilizzazione terrazzi</div>
+          <div class="mob-svc-desc">Sistemi a freddo e a caldo, guaine liquide e bituminose su ogni tipo di supporto</div>
+        </div>
+        <span class="mob-svc-arr">→</span>
+      </a>
+
+      <a href="#contatti" class="mob-svc-tile">
+        <div class="mob-svc-num">02</div>
+        <div class="mob-svc-body">
+          <div class="mob-svc-name">Posa di guaine</div>
+          <div class="mob-svc-desc">Ardesiata, poliurea, EPDM — scegliamo il sistema giusto in fase di sopralluogo</div>
+        </div>
+        <span class="mob-svc-arr">→</span>
+      </a>
+
+      <a href="#contatti" class="mob-svc-tile">
+        <div class="mob-svc-num">03</div>
+        <div class="mob-svc-body">
+          <div class="mob-svc-name">Massetto + pavimentazione</div>
+          <div class="mob-svc-desc">Rifacimento completo del piano, dall'isolamento termoacustico alla finitura</div>
+        </div>
+        <span class="mob-svc-arr">→</span>
+      </a>
+
+    </div>
+  </div>
+
+</div><!-- /mob-layout -->
+
+</div><!-- /#servizi -->
 
 <style>
   /* ── Desktop: 4-col bento ── */
@@ -207,25 +271,84 @@
   .ba-left   { left: 10px; }
   .ba-right  { right: 10px; }
 
-  /* ── Mobile: 2-col bento, no hero tile ── */
+  /* ── Mobile: hide bento, show dedicated mobile layout ── */
+  .mob-layout { display: none; }
+
   @media (max-width: 880px) {
-    .bento {
-      grid-template-columns: 1fr;
-      grid-auto-rows: minmax(100px, auto);
+    .bento-wrap { display: none; }
+    .mob-layout { display: block; }
+
+    /* ── Stats bar ── */
+    .mob-stats {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      border-top: 1.5px solid var(--line);
+      border-bottom: 1.5px solid var(--line);
+    }
+    .mob-stat {
+      padding: 16px 8px; text-align: center;
+      border-right: 1.5px solid var(--line);
+    }
+    .mob-stat:last-child { border-right: none; }
+    .mob-stat-num {
+      font-family: var(--font-ui);
+      font-weight: 800; font-size: 26px; line-height: 1;
+      color: var(--orange-bright); letter-spacing: -1px;
+    }
+    .mob-stat-cap {
+      font-family: var(--font-mono);
+      font-size: 9px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--ink-faint); margin-top: 4px;
     }
 
-    .tile-hero          { display: none; }
-
-    .tile-stat-anni     { order: 1; min-height: 110px; }
-    .tile-stat-garanzia { order: 2; min-height: 110px; }
-    .tile-cta           { order: 3; min-height: 100px; }
-    .tile-wide          { order: 4; min-height: 140px; grid-column: 1; }
-    .tile-svc           { order: 5; padding: 16px 18px; }
-    .tile-ba            { order: 7; min-height: 140px; grid-column: 1; }
-    .tile-svc-3         { order: 8; }
-
-    .tile-svc .hand     { font-size: 18px; letter-spacing: 0; line-height: 1.2; }
-    .tile-svc .arr      { font-size: 22px; }
+    /* ── Service section ── */
+    .mob-svc-section { padding: 28px 16px 24px; }
+    .mob-kicker {
+      font-family: var(--font-mono);
+      font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--orange-bright); margin-bottom: 6px;
+    }
+    .mob-sh {
+      font-family: var(--font-ui);
+      font-weight: 800; font-size: 25px; line-height: 1.04;
+      letter-spacing: -.4px; color: var(--ink); margin: 0;
+    }
+    .mob-svc-list {
+      display: flex; flex-direction: column; gap: 10px; margin-top: 16px;
+    }
+    .mob-svc-tile {
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 16px;
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--ink);
+      transition: border-color var(--dur);
+    }
+    .mob-svc-tile:active { border-color: var(--orange-deep); }
+    .mob-svc-num {
+      font-family: var(--font-ui);
+      font-weight: 800; font-size: 64px; line-height: 1;
+      color: rgba(219,98,2,.22); letter-spacing: -4px;
+      flex-shrink: 0; width: 52px; text-align: right;
+      align-self: stretch; margin-left: 10px;
+      display: flex; align-items: center; justify-content: flex-end;
+    }
+    .mob-svc-body { flex: 1; }
+    .mob-svc-name {
+      font-family: var(--font-ui);
+      font-weight: 700; font-size: 15px;
+      color: var(--ink); letter-spacing: -.2px;
+    }
+    .mob-svc-desc {
+      font-family: var(--font-ui);
+      font-size: 12px; color: var(--ink-soft);
+      margin-top: 4px; line-height: 1.45;
+    }
+    .mob-svc-arr {
+      font-family: var(--font-ui);
+      font-weight: 700; font-size: 20px;
+      color: var(--orange-bright); flex-shrink: 0;
+    }
   }
 </style>
 

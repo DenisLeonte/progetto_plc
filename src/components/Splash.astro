@@ -33,17 +33,10 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
 <!-- Mobile-only: hero text lives BELOW the image, not overlaid -->
 <div class="hero-mobile" aria-label="Hero text">
   <p class="mob-eye">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
-  <div class="mob-kw">
-    <span>Impermeabilizzare</span>
-    <span class="d">◆</span>
-    <span>Ristrutturare</span>
-    <span class="d">◆</span>
-    <span>Garantire</span>
-  </div>
   <h1 class="mob-h1">Terrazzi a prova<br>d'acqua.</h1>
   <div class="mob-btns">
-    <a class="btn-base btn-cta mob-btn" href="#contatti">Prenota un sopralluogo</a>
-    <a class="btn-base btn-ghost mob-btn" href="#servizi">Scopri i lavori →</a>
+    <a class="mob-btn-primary" href="#contatti">Prenota un sopralluogo</a>
+    <a class="mob-btn-ghost" href="#servizi">Scopri i lavori →</a>
   </div>
 </div>
 
@@ -132,55 +125,56 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
   .hero-mobile {
     display: none;
     flex-direction: column;
-    gap: 14px;
-    padding: 22px 18px 24px;
+    gap: 12px;
+    padding: 20px 18px 22px;
     background: var(--bg);
+    border-bottom: 1.5px solid var(--line-soft);
   }
   .mob-eye {
     margin: 0;
     font-family: var(--font-mono);
-    font-size: 9px;
+    font-size: 9.5px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--ink-soft);
+    color: rgba(238,242,244,.7);
   }
   .mob-eye b { color: var(--orange-bright); font-weight: 400; }
-  .mob-kw {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-family: var(--font-ui);
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--ink);
-  }
-  .mob-kw .d { color: var(--orange-bright); font-size: .8em; }
   .mob-h1 {
-    font-family: var(--font-head);
+    font-family: var(--font-ui);
     font-weight: 800;
-    font-size: 34px;
-    line-height: 1.04;
+    font-size: 32px;
+    line-height: 1.02;
     letter-spacing: -.5px;
-    color: var(--ink);
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0,0,0,.4);
     margin: 0;
   }
-  :global(body.char-industriale) .mob-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-weight: 600;
+  .mob-btns { display: flex; flex-direction: column; gap: 9px; }
+  .mob-btn-primary {
+    display: block; width: 100%; padding: 15px;
+    background: var(--orange); color: #160d04;
+    font-family: var(--font-ui); font-weight: 800; font-size: 15px; letter-spacing: .2px;
+    border-radius: 12px; text-align: center; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(219,98,2,.35);
+    transition: background .15s, box-shadow .15s;
   }
-  .mob-btns { display: flex; flex-direction: column; gap: 10px; }
-  .mob-btn  { justify-content: center; font-size: 16px; padding: 14px 19px; }
+  .mob-btn-primary:active { background: var(--orange-deep); box-shadow: none; }
+  .mob-btn-ghost {
+    display: block; width: 100%; padding: 13px;
+    background: transparent; color: var(--ink-soft);
+    font-family: var(--font-ui); font-weight: 600; font-size: 15px;
+    border: 1.5px solid var(--line); border-radius: 12px;
+    text-align: center; text-decoration: none;
+    transition: border-color .15s, color .15s;
+  }
+  .mob-btn-ghost:active { border-color: var(--ink-soft); color: var(--ink); }
 
   /* ── Responsive ── */
   @media (max-width: 880px) {
     /* Image: show full logo with contain, short height, fade at bottom */
     .splash {
-      min-height: 260px;
-      height: 260px;
+      min-height: 280px;
+      height: 280px;
       padding: 18px 20px 0;
       background-size: 130%;
       justify-content: flex-start;

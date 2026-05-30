@@ -17,6 +17,7 @@
             <input  class="field" type="tel"   name="telefono"    placeholder="Telefono *"                    required />
             <input  class="field" type="text"  name="zona"        placeholder="Zona / Comune *"               required />
             <textarea class="field area" name="descrizione" placeholder="Descrivi brevemente il lavoro *" required></textarea>
+            <p class="form-note">Nessuno spam · solo per la tua richiesta</p>
             <button class="btn-base btn-cta submit-btn" type="submit">Invia richiesta</button>
             <div class="success-msg" id="form-success">
               ✓ Richiesta inviata! Vi contatteremo entro 24 ore.
@@ -81,6 +82,10 @@
   .field::placeholder { color: var(--ink-faint); }
   .field:focus { border-color: var(--orange-deep); color: var(--ink); }
   .area      { height: 96px; }
+  .form-note {
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: .5px;
+    color: var(--ink-faint); text-transform: uppercase; margin: 0;
+  }
   .submit-btn { justify-content: center; }
 
   .success-msg {
