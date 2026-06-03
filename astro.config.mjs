@@ -2,8 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://DenisLeonte.github.io',
-  base: '/progetto_plc',
+  site: 'https://plc-group.it',
   integrations: [react()],
   output: 'static',
 });
