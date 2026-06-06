@@ -65,12 +65,8 @@
       <!-- Before / After slider — col 1-2 row 4 | mobile order 7 -->
       <div class="tile tile-ba">
         <div class="ba-slider" id="ba-slider">
-          <div class="ba-after">
-            <img class="cover-img" src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo dopo l'impermeabilizzazione" />
-          </div>
-          <div class="ba-before" id="ba-before">
-            <img class="cover-img" src="https://images.unsplash.com/photo-1616179058441-37aa58affac8?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo prima dell'intervento" />
-          </div>
+          <img class="ba-img" src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo dopo l'impermeabilizzazione" />
+          <img class="ba-img" id="ba-img-before" src="https://images.unsplash.com/photo-1616179058441-37aa58affac8?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo prima dell'intervento" style="clip-path: inset(0 50% 0 0)" />
           <div class="ba-handle" id="ba-handle">
             <div class="ba-pill">⇔</div>
           </div>
@@ -262,10 +258,10 @@
   /* ── Before/After ── */
   .tile-ba { grid-column: span 2; cursor: ew-resize; }
   .ba-slider { position: absolute; inset: 0; overflow: hidden; user-select: none; }
-  .ba-after  { position: absolute; inset: 0; }
-  .ba-before { position: absolute; inset: 0; width: 50%; overflow: hidden; border-right: 2px solid rgba(255,255,255,.8); }
+  .ba-img    { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
   .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; pointer-events: none; }
-  .ba-pill   { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.9); color:#222; display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 2px 12px rgba(0,0,0,.4); }
+  .ba-handle::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,.8); transform: translateX(-50%); }
+  .ba-pill   { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.9); color:#222; display: flex; align-items: center; justify-content: center; font-size: 13px; box-shadow: 0 2px 12px rgba(0,0,0,.4); position: relative; z-index: 1; }
   .ba-label  { position: absolute; bottom: 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 8px; border-radius: 5px; background: rgba(0,0,0,.55); color: rgba(255,255,255,.9); }
   .ba-left   { left: 10px; }
   .ba-right  { right: 10px; }
@@ -352,16 +348,16 @@
 </style>
 
 <script>
-  const slider = document.getElementById('ba-slider');
-  const before = document.getElementById('ba-before');
-  const handle = document.getElementById('ba-handle');
-  if (slider && before && handle) {
+  const slider      = document.getElementById('ba-slider');
+  const beforeImg   = document.getElementById('ba-img-before') as HTMLImageElement | null;
+  const handle      = document.getElementById('ba-handle');
+  if (slider && beforeImg && handle) {
     let active = false;
     const move = (x: number) => {
       const r   = slider.getBoundingClientRect();
       const pct = Math.max(0, Math.min(100, ((x - r.left) / r.width) * 100));
-      before.style.width = pct + '%';
-      handle.style.left  = pct + '%';
+      beforeImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left        = pct + '%';
     };
     slider.addEventListener('mousedown',  e => { active = true; move(e.clientX); });
     slider.addEventListener('touchstart', e => { active = true; move(e.touches[0].clientX); }, { passive: true });
