@@ -1,13 +1,13 @@
 ---
-const base      = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const logoLight = `${base}assets/plc-icon-light.png`;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const logo = `${base}assets/plc-icon-light.png`;
 ---
 
 <div class="nav-wrap" id="nav-wrap">
   <div class="wrap">
     <nav>
       <a href="#" class="brand">
-        <img src={logoLight} alt="PLC Group" id="nav-logo" />
+        <img src={logo} alt="PLC Group" />
         <div class="word">
           <b>PLC</b>
           <span>GROUP</span>
@@ -59,9 +59,6 @@ const logoLight = `${base}assets/plc-icon-light.png`;
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
   }
-  :global(body.mood-cemento) .nav-wrap.scrolled {
-    background: rgba(231, 227, 220, .9);
-  }
 
   nav {
     display: flex;
@@ -78,9 +75,8 @@ const logoLight = `${base}assets/plc-icon-light.png`;
   }
   .brand img { height: 42px; width: auto; }
   .word      { font-family: var(--font-ui); line-height: 1; }
-  .word b    { display: block; font-weight: 800; font-size: 21px; letter-spacing: 1px; color: #fff; }
+  .word b    { display: block; font-weight: 800; font-size: 21px; letter-spacing: 1px; color: var(--ink); }
   .word span { display: block; font-weight: 500; font-size: 10px; letter-spacing: 7px; color: var(--orange-bright); margin-top: 2px; }
-  :global(body.mood-cemento) .word b { color: var(--ink); }
 
   .nlinks {
     display: flex;
@@ -189,11 +185,11 @@ const logoLight = `${base}assets/plc-icon-light.png`;
     padding: 14px;
     background: var(--orange);
     color: #160d04;
-    border-radius: 11px;
+    border-radius: 8px;
     text-align: center;
     font-family: var(--font-head);
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: none;
     transition: background var(--dur);
   }

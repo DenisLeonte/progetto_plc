@@ -31,7 +31,7 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
         <div class="cert-row">
           {certBadges.map(b => (
             <div class="cert-badge">
-              <span class="ico">{b.icon}</span>
+              <span class="ico" aria-hidden="true">{b.icon}</span>
               {b.label}
             </div>
           ))}
@@ -40,7 +40,10 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
 
       <!-- Right: map + zones -->
       <div class="reveal delay-2">
-        <div class="map-ph">📍 Mappa zona servita — Roma + tutto il Lazio</div>
+        <div class="map-ph">
+          <img src="/assets/map-lazio.png" alt="Zona servita — Roma e tutto il Lazio" class="map-img" />
+          <span class="map-pin">📍 Roma &amp; Lazio</span>
+        </div>
         <div class="zone-chips">
           {zones.map(z => <span class="chip">{z}</span>)}
           <span class="chip chip-orange">+ trasferte</span>
@@ -70,7 +73,7 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
 
   .cert-row  { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
   .cert-badge {
-    background: var(--surface); border: 2px solid var(--line); border-radius: 10px;
+    background: var(--surface); border: 2px solid var(--line); border-radius: 8px;
     padding: 10px 14px; font-family: var(--font-mono); font-size: 10px;
     letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft);
     display: flex; align-items: center; gap: 8px;
@@ -78,12 +81,20 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
   .ico { font-size: 18px; }
 
   .map-ph {
-    height: 220px; border-radius: 12px;
-    background: var(--surface); border: 2px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--ink-faint);
+    height: 220px; border-radius: 10px;
+    border: 2px solid var(--line);
+    overflow: hidden; position: relative;
     margin-bottom: 14px;
+  }
+  .map-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .map-pin {
+    position: absolute; bottom: 10px; left: 10px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink);
+    background: rgba(17,20,23,.82); padding: 5px 10px; border-radius: 5px;
+    backdrop-filter: blur(4px);
   }
 
   .zone-chips  { display: flex; gap: 9px; flex-wrap: wrap; }
@@ -91,6 +102,5 @@ const zones = ['Roma', 'Latina', 'Frosinone', 'Viterbo', 'Rieti'];
 
   @media (max-width: 880px) {
     .split { grid-template-columns: 1fr; }
-    :global(section) { padding: 28px 0; }
   }
 </style>

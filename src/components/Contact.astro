@@ -40,7 +40,10 @@
             </a>
           </div>
 
-          <div class="map-ph">📍 Sede — Roma</div>
+          <div class="map-ph">
+            <img src="/assets/map-lazio.png" alt="Zona servita — Roma e Lazio" class="map-img" />
+            <span class="map-pin">📍 Roma</span>
+          </div>
 
           <span class="chip chip-orange">Lun–Sab · 8:00–19:00</span>
         </div>
@@ -52,7 +55,7 @@
 
 <style>
   .contact-wrap {
-    background: var(--bg-2);
+    background: var(--surface);
     border-top: 2px solid var(--line-soft);
     border-bottom: 2px solid var(--line-soft);
   }
@@ -73,8 +76,8 @@
 
   .form   { display: flex; flex-direction: column; gap: 11px; max-width: 430px; }
   .field  {
-    background: var(--surface); border: 2px solid var(--line);
-    border-radius: 11px; padding: 13px 15px;
+    background: var(--surface-2); border: 2px solid var(--line);
+    border-radius: 8px; padding: 13px 15px;
     font-family: var(--font-body); color: var(--ink-faint); font-size: 15px;
     width: 100%; outline: none; resize: vertical;
     transition: border-color var(--dur), color var(--dur);
@@ -90,8 +93,8 @@
 
   .success-msg {
     display: none;
-    background: var(--surface-2); border: 2px solid var(--orange-deep);
-    border-radius: 11px; padding: 14px;
+    background: var(--bg); border: 2px solid var(--orange-deep);
+    border-radius: 8px; padding: 14px;
     color: var(--orange-bright); font-family: var(--font-ui); font-size: 14px; text-align: center;
   }
 
@@ -113,17 +116,24 @@
   .ico { font-size: 17px; flex-shrink: 0; }
 
   .map-ph {
-    height: 160px; border-radius: 12px;
-    background: var(--surface); border: 2px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--ink-faint);
+    height: 160px; border-radius: 10px;
+    border: 2px solid var(--line);
+    overflow: hidden; position: relative;
+  }
+  .map-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .map-pin {
+    position: absolute; bottom: 8px; left: 8px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink);
+    background: rgba(17,20,23,.82); padding: 4px 9px; border-radius: 5px;
+    backdrop-filter: blur(4px);
   }
   .chip-orange { border-color: var(--orange); color: var(--orange-bright); }
 
   @media (max-width: 880px) {
     .split { grid-template-columns: 1fr; }
-    .contact-wrap :global(section) { padding: 28px 0; }
   }
 </style>
 

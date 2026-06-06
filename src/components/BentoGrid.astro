@@ -11,10 +11,10 @@
 
       <!-- Hero photo — desktop only, hidden on mobile (hero is in Splash on mobile) -->
       <div class="tile tile-hero">
-        <div class="ph ph-fill"><span class="lbl">FOTO HERO — terrazzo impermeabilizzato</span></div>
+        <img class="cover-img" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?w=800&h=1100&q=80&auto=format&fit=crop" alt="Due operai al lavoro su un tetto" />
         <div class="overlay">
           <p class="kicker">Impermeabilizzazioni · Roma &amp; Lazio</p>
-          <h1 class="hand xl">Terrazzi a prova<br>d'acqua.</h1>
+          <h2 class="hand xl">Terrazzi a prova<br>d'acqua.</h2>
           <p class="sub">
             Interventi professionali con garanzia scritta 10 anni.
           </p>
@@ -39,7 +39,7 @@
 
       <!-- Wide site photo — col 3-4 row 2 | mobile order 4 -->
       <div class="tile tile-wide">
-        <div class="ph ph-fill"><span class="lbl">FOTO — cantiere / posa guaina</span></div>
+        <img class="cover-img" src="https://images.unsplash.com/photo-1574757987642-5755f0839101?w=1200&h=500&q=80&auto=format&fit=crop" alt="Operaio al lavoro su massetto" />
       </div>
 
       <!-- Service 1 — col 3 row 3 | mobile order 5 -->
@@ -66,10 +66,10 @@
       <div class="tile tile-ba">
         <div class="ba-slider" id="ba-slider">
           <div class="ba-after">
-            <div class="ph ph-fill"><span class="lbl">DOPO</span></div>
+            <img class="cover-img" src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo dopo l'impermeabilizzazione" />
           </div>
           <div class="ba-before" id="ba-before">
-            <div class="ph ph-fill ph-wide"><span class="lbl">PRIMA</span></div>
+            <img class="cover-img" src="https://images.unsplash.com/photo-1616179058441-37aa58affac8?w=800&h=600&q=80&auto=format&fit=crop" alt="Terrazzo prima dell'intervento" />
           </div>
           <div class="ba-handle" id="ba-handle">
             <div class="ba-pill">⇔</div>
@@ -169,7 +169,7 @@
   }
 
   .tile {
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -177,8 +177,7 @@
     color: var(--ink);
   }
 
-  .ph-fill { position: absolute; inset: 0; border: none; border-radius: 0; }
-  .ph-wide { min-width: 200%; }
+  .cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* ── Hero (desktop only) ── */
   .tile-hero { grid-column: span 2; grid-row: span 3; }
@@ -243,8 +242,8 @@
   .tile-svc .hand   { margin-top: 0; }
 
   .svc-num {
-    font-family: var(--font-head); font-size: 52px;
-    line-height: 1; color: var(--orange); opacity: .35;
+    font-family: var(--font-head); font-size: 44px;
+    line-height: 1; color: var(--orange); opacity: .28;
     letter-spacing: -1px; margin-bottom: 6px;
   }
   .svc-desc {
@@ -318,7 +317,7 @@
     .mob-svc-tile {
       background: var(--surface);
       border: 1.5px solid var(--line);
-      border-radius: 14px;
+      border-radius: 10px;
       padding: 18px 16px;
       display: flex; align-items: center; gap: 10px;
       text-decoration: none; color: var(--ink);

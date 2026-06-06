@@ -1,11 +1,11 @@
 ---
 const projects = [
-  { title: 'Terrazzo · Roma EUR',      sub: '120 m² · 2025', cats: ['terrazzi', 'ristrutturazioni'] },
-  { title: 'Lastrico · Frosinone',     sub: '80 m² · 2024',  cats: ['guaine'] },
-  { title: 'Condominio · Latina',      sub: '300 m² · 2024', cats: ['terrazzi', 'ristrutturazioni'] },
-  { title: 'Terrazza · Roma Parioli',  sub: '65 m² · 2025',  cats: ['guaine', 'terrazzi'] },
-  { title: 'Balcone · Viterbo',        sub: '40 m² · 2024',  cats: ['ristrutturazioni'] },
-  { title: 'Lastrico · Rieti',         sub: '180 m² · 2023', cats: ['guaine', 'terrazzi'] },
+  { title: 'Terrazzo · Roma EUR',      sub: '120 m² · 2025', cats: ['terrazzi', 'ristrutturazioni'], img: 'https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Lavori su tetto' },
+  { title: 'Lastrico · Frosinone',     sub: '80 m² · 2024',  cats: ['guaine'],                       img: 'https://images.unsplash.com/photo-1518736346281-76873166a64a?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Tetto grigio impermeabilizzato' },
+  { title: 'Condominio · Latina',      sub: '300 m² · 2024', cats: ['terrazzi', 'ristrutturazioni'], img: 'https://images.unsplash.com/photo-1635424709961-f3a150459ad4?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Operai su tetto' },
+  { title: 'Terrazza · Roma Parioli',  sub: '65 m² · 2025',  cats: ['guaine', 'terrazzi'],           img: 'https://images.unsplash.com/photo-1635424824800-692767998d07?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Operaio in giubbotto giallo su tetto' },
+  { title: 'Balcone · Viterbo',        sub: '40 m² · 2024',  cats: ['ristrutturazioni'],             img: 'https://images.unsplash.com/photo-1563166423-482a8c14b2d6?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Lavori edili' },
+  { title: 'Lastrico · Rieti',         sub: '180 m² · 2023', cats: ['guaine', 'terrazzi'],           img: 'https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=600&h=400&q=80&auto=format&fit=crop', imgAlt: 'Operaio su tetto' },
 ];
 
 const filters = [
@@ -44,7 +44,7 @@ const filters = [
           data-cats={p.cats.join(' ')}
         >
           <div class="photo">
-            <div class="ph ph-sq"><span class="lbl">FOTO progetto</span></div>
+            <img class="proj-img" src={p.img} alt={p.imgAlt} loading="lazy" />
           </div>
           <div class="meta">
             <h3>{p.title}</h3>
@@ -82,7 +82,7 @@ const filters = [
   .pcard {
     background: var(--surface);
     border: 2px solid var(--line);
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     transition: transform .2s, border-color var(--dur);
@@ -91,7 +91,7 @@ const filters = [
   .pcard[data-hidden] { display: none; }
 
   .photo    { height: 172px; overflow: hidden; }
-  .ph-sq    { height: 100%; border: none; border-radius: 0; }
+  .proj-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .meta     { padding: 14px 16px; }
   .meta h3  { font-family: var(--font-head); font-size: 21px; margin: 0 0 3px; }

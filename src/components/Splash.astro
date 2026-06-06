@@ -4,8 +4,8 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
 ---
 
 <!--
-  Desktop: full-screen section, text overlaid at bottom.
-  Mobile:  260px image block (contain) + separate text block below.
+  Desktop: full-screen section, h1 + keywords + scroll cue at bottom, centered.
+  Mobile:  260px image block + separate text block below with the h1.
 -->
 
 <section
@@ -13,10 +13,10 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
   aria-label="Hero"
   style={`--hero-url: url('${heroUrl}')`}
 >
-  <!-- desktop-only content inside the image -->
   <p class="eyebrow desktop-only">Impermeabilizzazioni · <b>Roma &amp; Lazio</b></p>
+
   <div class="splash-foot desktop-only">
-    <div class="keywords">
+    <div class="keywords" aria-label="Servizi principali">
       <span>Impermeabilizzare</span>
       <span class="d">◆</span>
       <span>Ristrutturare</span>
@@ -41,7 +41,6 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
 </div>
 
 <style>
-  /* ── Shared splash image ── */
   .splash {
     position: relative;
     min-height: 91vh;
@@ -61,10 +60,10 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
     background: linear-gradient(
       180deg,
       rgba(10,10,12,.7)  0%,
-      rgba(10,10,12,0)  22%,
-      rgba(10,10,12,0)  44%,
-      rgba(10,10,12,.58) 72%,
-      var(--bg)          98%
+      rgba(10,10,12,0)   22%,
+      rgba(10,10,12,0)   44%,
+      rgba(10,10,12,.65) 72%,
+      var(--bg)          100%
     );
     pointer-events: none;
     z-index: 0;
@@ -81,11 +80,23 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
   }
   .eyebrow b { color: var(--orange-bright); font-weight: 400; }
 
+  /* Vertically-stacked bottom block, centered */
   .splash-foot {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .splash-h1 {
+    color: #fff;
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 2px 40px rgba(0,0,0,.45);
   }
 
   .keywords {
@@ -136,42 +147,55 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
     font-size: 9.5px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(238,242,244,.7);
+    color: var(--ink-soft);
   }
   .mob-eye b { color: var(--orange-bright); font-weight: 400; }
   .mob-h1 {
-    font-family: var(--font-ui);
+    font-family: var(--font-head);
     font-weight: 800;
-    font-size: 32px;
+    font-size: 34px;
     line-height: 1.02;
-    letter-spacing: -.5px;
-    color: #fff;
-    text-shadow: 0 2px 20px rgba(0,0,0,.4);
+    letter-spacing: -0.6px;
+    color: var(--ink);
     margin: 0;
   }
   .mob-btns { display: flex; flex-direction: column; gap: 9px; }
   .mob-btn-primary {
-    display: block; width: 100%; padding: 15px;
-    background: var(--orange); color: #160d04;
-    font-family: var(--font-ui); font-weight: 800; font-size: 15px; letter-spacing: .2px;
-    border-radius: 12px; text-align: center; text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--orange);
+    color: #160d04;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .2px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
     box-shadow: 0 6px 20px rgba(219,98,2,.35);
     transition: background .15s, box-shadow .15s;
   }
   .mob-btn-primary:active { background: var(--orange-deep); box-shadow: none; }
   .mob-btn-ghost {
-    display: block; width: 100%; padding: 13px;
-    background: transparent; color: var(--ink-soft);
-    font-family: var(--font-ui); font-weight: 600; font-size: 15px;
-    border: 1.5px solid var(--line); border-radius: 12px;
-    text-align: center; text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 15px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
     transition: border-color .15s, color .15s;
   }
   .mob-btn-ghost:active { border-color: var(--ink-soft); color: var(--ink); }
 
   /* ── Responsive ── */
   @media (max-width: 880px) {
-    /* Image: show full logo with contain, short height, fade at bottom */
     .splash {
       min-height: 280px;
       height: 280px;
@@ -189,9 +213,7 @@ const heroUrl = `${base}assets/plc-hero-metal.jpg`;
         var(--bg)         100%
       );
     }
-    /* Hide desktop overlay text on mobile */
     .desktop-only { display: none !important; }
-    /* Show mobile text block */
     .hero-mobile  { display: flex; }
   }
 </style>
