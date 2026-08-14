@@ -11,9 +11,18 @@ Add these Actions secrets under **Settings → Secrets and variables → Actions
 - `CLOUDFLARE_API_TOKEN`: a Cloudflare API token with Workers Scripts edit access
 - `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID that owns the Worker
 
-After the secrets are configured, every push to `master` deploys the contents of
-`dist/` to the `plc-group-website` Worker. The workflow can also be started
-manually from the Actions tab.
+After the secrets are configured:
+
+- every pull request targeting `master` deploys an isolated Worker named
+  `plc-group-pr-<PR number>`;
+- the branch preview URL is shown in the workflow run summary;
+- every push to `master` deploys `dist/` to the production
+  `plc-group-website` Worker;
+- the production workflow can also be started manually from the Actions tab.
+
+Pull request previews use a separate Worker and do not change production
+traffic. Pushing another commit to the pull request updates the same preview
+Worker.
 
 ## Local deployment
 
